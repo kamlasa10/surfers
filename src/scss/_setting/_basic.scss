@@ -1,0 +1,189 @@
+*, *::before,
+*, *::after {
+  box-sizing: inherit;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.catalog-overlay--showed {
+  .catalog-overlay {
+    display: flex;
+  }
+}
+
+.dot-active {
+  background-color: $red;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: $museoSans;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  color: $globalColor;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+ul, ol {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+  margin: 0;
+}
+
+.wrapper {
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  width: 100%;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.section-wrap {
+  padding-left: 90px;
+  padding-right: 90px;
+
+  @media (max-width: 1100px) {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  @include phones {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.row {
+  display: flex;
+}
+
+p {
+  margin: 0;
+}
+
+.section {
+  padding-top: 85px;
+  padding-bottom: 70px;
+
+  @include tablets {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  vertical-align: top;
+  padding: 10px 20px;
+  font-size: 12px;
+  line-height: 16px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #fff;
+  background-color: $red;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: $smothy;
+
+  &:hover {
+    background-color: darken($red, 10%);
+  }
+
+  &:active {
+    background-color: darken($red, 15%);
+  }
+}
+
+.section-title {
+  margin-bottom: 75px;
+  font-size: 30px;
+  line-height: 35px;
+  text-align: center;
+
+  @include tablets {
+    margin-bottom: 50px;
+  }
+
+  @include phones {
+    font-size: 25px;
+    line-height: 30px;
+    margin-bottom: 30px;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInLeft {
+  animation-name: slideInLeft;
+  animation-duration: 0.4s;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.slideInRight {
+  animation-name: slideInRight;
+  animation-duration: 0.7s;
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInDown {
+  animation-name: fadeInDown;
+  animation-duration: 0.4s;
+}
