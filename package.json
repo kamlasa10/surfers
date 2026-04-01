@@ -40,7 +40,7 @@
     "gulp.spritesmith": "^6.11.0",
     "jquery": "^3.4.1",
     "regenerator-runtime": "^0.13.5",
-    "spritesmith": "^3.4.0",
+    "spritesmith": "^3.5.1",
     "vinyl-buffer": "^1.0.1",
     "watchify": "^3.11.1",
     "yarn": "^1.22.4"
